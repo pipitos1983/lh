@@ -5,7 +5,7 @@ p, li { white-space: pre-wrap; }
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Симптоматика:</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cat  /var/log/vmware/vpxd/vpxd.log </p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">error vpxd[7FC644A87700] [Originator@6876 sub=Default opID=HostSync-host-48-221105f1] [VdbStatement] Statement diagnostic data from driver is 23505:0:7:ERROR: <span style=" text-decoration: underline;">duplicate</span><span style=" text-decoration: underline;"> key value violates unique constraint &quot;pk_vpx_vm_virtual_device&quot;;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">error vpxd[7FC644A87700] [Originator@6876 sub=Default opID=HostSync-host-48-221105f1] [VdbStatement] Statement diagnostic data from driver is 23505:0:7:ERROR: <span style=" text-decoration: underline;">duplicate key value violates unique constraint &quot;pk_vpx_vm_virtual_device&quot;;</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">--&gt; Error while executing the query</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">grep already /var/log/vmware/vpostgres/postgresql-*.log</p>
@@ -20,11 +20,11 @@ p, li { white-space: pre-wrap; }
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">/opt/vmware/vpostgres/current/bin/psql -U postgres</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">\c VCDB &lt;- выбор БД</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">SELECT id,device_key,device_info_summary FROM vpx_vm_virtual_device where id=91;</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">получаем список всех  устройств с таким id, находим принадлежащие 1 виртуалке и удаляем все: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">получаем список всех  устройств с таким id, находим одинаковые и удаляем все: </p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">DELETE FROM vpx_vm_virtual_device where id=91 and device_key=0;</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">DELETE FROM vpx_vm_virtual_device where id=91 and device_key=4000;</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">\q &lt;- выход из постгреса</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">перезапуск сервера vsphere ( или конкретных сервисов, но как как отдельно я хз )</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">перезапуск сервера vsphere ( или конкретных сервисов, service-control --start vmware-vpxd )</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Профилактика:</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">не выяснено</p>
