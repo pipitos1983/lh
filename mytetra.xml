@@ -9,12 +9,12 @@
      <recordtable>
       <record id="14877501110jeyr5v0sv" name="Монтирование" author="" url="" tags="" ctime="20170222115610" dir="1487750111u95vizy6ye" file="text.html"/>
       <record id="1487753178vanvll1drp" name="файловые системы в файле, swap" author="" url="" tags="" ctime="20170222115612" dir="14877531789s1tscl2tz" file="text.html"/>
-      <record id="14877500247n1tt38z0e" name="docker" author="" url="" tags="" ctime="20170222115614" dir="14877500245wf9jny6ll" file="text.html"/>
+      <record id="14877500247n1tt38z0e" name="docker. пример: запуск alfresco как контейнер" author="" url="" tags="" ctime="20170222115614" dir="14877500245wf9jny6ll" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1487753785846jf0jxwb" name="windows">
      <recordtable>
-      <record id="1487749650t5x591f9bb" name="WinSxS" author="" url="" tags="" ctime="20170222115629" dir="1487749650gdmvpuat5n" file="text.html"/>
+      <record id="1487749650t5x591f9bb" name="WinSxS чистка" author="" url="" tags="" ctime="20170222115629" dir="1487749650gdmvpuat5n" file="text.html"/>
       <record id="1300000000aaaaaaaaa3" name="dotnet 3.5 and windows 2012 r2 server" author="" url="" tags="dotnet, windows server 2012, updates" ctime="20170222115632" dir="1300000000aaaaaaaaa2" file="text.html"/>
      </recordtable>
     </node>
@@ -33,6 +33,10 @@
      </recordtable>
     </node>
    </node>
+  </node>
+  <node crypt="" id="1487973094bqg5x1pdeu" name="game">
+   <node crypt="" id="1487973113uuzswnmqal" name="d3"/>
+   <node crypt="" id="14879731199y62zcek99" name="wow"/>
   </node>
  </content>
 </root>
