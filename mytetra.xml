@@ -5,6 +5,9 @@
  <content>
   <node crypt="" id="1300000000aaaaaaaaa1" name="it">
    <node crypt="" id="14872543380dveb2jp4x" name="Админство">
+    <recordtable>
+     <record id="1488198271wxvtkc4zlj" name="java и flash полные дистрибутивы" author="" url="" tags="" ctime="20170227152431" dir="1488198271e3vpzuflkc" file="text.html"/>
+    </recordtable>
     <node crypt="" id="1487753764i35b3junjo" name="linux">
      <recordtable>
       <record id="14877501110jeyr5v0sv" name="Монтирование" author="" url="" tags="" ctime="20170222115610" dir="1487750111u95vizy6ye" file="text.html"/>
