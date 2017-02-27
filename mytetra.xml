@@ -5,9 +5,6 @@
  <content>
   <node crypt="" id="1300000000aaaaaaaaa1" name="it">
    <node crypt="" id="14872543380dveb2jp4x" name="Админство">
-    <recordtable>
-     <record id="1488137828s4th7zui78" name="mysql копирование таблицы" author="" url="" tags="" ctime="20170226223708" dir="14881378284v1iloanba" file="text.html"/>
-    </recordtable>
     <node crypt="" id="1487753764i35b3junjo" name="linux">
      <recordtable>
       <record id="14877501110jeyr5v0sv" name="Монтирование" author="" url="" tags="" ctime="20170222115610" dir="1487750111u95vizy6ye" file="text.html"/>
@@ -27,6 +24,12 @@
        <record id="1487760723uuxgcx19ld" name="падение vpxd при дублирующихся устройствах" author="" url="" tags="" ctime="20170222135203" dir="1487760723bbqzst9wme" file="text.html"/>
       </recordtable>
      </node>
+    </node>
+    <node crypt="" id="148817909321ubbgtux3" name="СУБД">
+     <recordtable>
+      <record id="1488137828s4th7zui78" name="mysql копирование таблицы" author="" url="" tags="" ctime="20170227100509" dir="14881378284v1iloanba" file="text.html"/>
+      <record id="1488179294kav3fa27ai" name="DB2 скрипт запуска (init)" author="" url="" tags="" ctime="20170227100814" dir="14881792942pgsf705x6" file="text.html"/>
+     </recordtable>
     </node>
    </node>
    <node crypt="" id="1487254369qtyp1tbutt" name="програмизм">
