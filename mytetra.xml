@@ -41,7 +41,11 @@
       <record id="14872549077ijx6jdlq4" name="заметки" author="" url="" tags="" ctime="20170216172147" dir="1487254907f8g8s07cl7" file="text.html"/>
      </recordtable>
     </node>
-    <node crypt="" id="1488352726rhy81gx0b9" name="php"/>
+    <node crypt="" id="1488352726rhy81gx0b9" name="php">
+     <recordtable>
+      <record id="1488352991cps1g60jvb" name="настройка окружения" author="" url="" tags="" ctime="20170301102311" dir="1488352991w6qs596ga5" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
   </node>
   <node crypt="1" icon="" id="1487973094bqg5x1pdeu" name="UkM1U0lNUAMEX1fJFEK3yN28MRhZhw1qN1GUcH/oSVmzv87ir/VjSYznFXicckGe">
