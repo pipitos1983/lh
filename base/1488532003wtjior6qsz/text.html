@@ -10,6 +10,16 @@ p, li { white-space: pre-wrap; }
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">помним что при установке:</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&quot;[info] zabbix_server is disabled in /etc/default/zabbix-server&quot;</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Для управления и просмотра нужно ставить вебморду:</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">apt-get install zabbix-frontend-php</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">копируем конфиг и делаем линк:</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cd /usr/share/doc/zabbix-frontend-php/examples/apache.conf /etc/apache2/sites-available/zabbix.conf</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ln -s /etc/apache2/sites-available/zabbix.conf /etc/apache2/sites-enabled/zabbix.conf</p>
@@ -25,5 +35,9 @@ p, li { white-space: pre-wrap; }
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                allow from all</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/Directory&gt;</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">перегружаем:</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">service apache2 reload</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p></body></html>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">После этого можно зайти на </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">http://адрессайта/zabbix</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">и продолжить настройку.</p></body></html>
