@@ -31,6 +31,11 @@
        <record id="1488532003k64j8rahp5" name="astra zabbix" author="" url="" tags="" ctime="20170317111155" dir="1488532003wtjior6qsz" file="text.html"/>
       </recordtable>
      </node>
+     <node crypt="" id="1489760843d5zt4f1gfb" name="debian">
+      <recordtable>
+       <record id="1489760870dvwvakrbfp" name="DB2" author="" url="" tags="" ctime="20170317172750" dir="14897608702vo148glpb" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1487753785846jf0jxwb" name="windows">
      <recordtable>
