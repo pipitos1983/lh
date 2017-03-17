@@ -14,14 +14,18 @@
       <record id="14877501110jeyr5v0sv" name="Монтирование" author="" url="" tags="" ctime="20170222115610" dir="1487750111u95vizy6ye" file="text.html"/>
       <record id="1487753178vanvll1drp" name="файловые системы в файле, swap" author="" url="" tags="" ctime="20170222115612" dir="14877531789s1tscl2tz" file="text.html"/>
       <record id="14877500247n1tt38z0e" name="docker. пример: запуск alfresco как контейнер" author="" url="" tags="" ctime="20170222115614" dir="14877500245wf9jny6ll" file="text.html"/>
-      <record id="1488532003k64j8rahp5" name="astra zabbix" author="" url="" tags="" ctime="20170303120643" dir="1488532003wtjior6qsz" file="text.html"/>
-      <record id="1488533160yaoky6y854" name="astra apache2" author="" url="" tags="" ctime="20170303122600" dir="1488533160q7b8jrnvin" file="text.html"/>
       <record id="1489504204jclaokok7g" name="запуск графических прог по ssh" author="" url="" tags="" ctime="20170314181004" dir="1489504204qgmbn4ezi6" file="text.html"/>
      </recordtable>
      <node crypt="" id="14896576688fpr7zo7pe" name="fedora">
       <recordtable>
        <record id="14896567158w2pcuvhhb" name="не видно русских букв в консоли" author="" url="" tags="" ctime="20170316124752" dir="1489656715cxt1dtz8rc" file="text.html"/>
        <record id="1489657881y1wxrtbw8q" name="vhci-hcd.ko" author="" url="" tags="" ctime="20170316125121" dir="1489657881bjceymvt9u" file="text.html"/>
+      </recordtable>
+     </node>
+     <node crypt="" id="1489738303j42t5log7d" name="astra">
+      <recordtable>
+       <record id="1488533160yaoky6y854" name="astra apache2" author="" url="" tags="" ctime="20170317111150" dir="1488533160q7b8jrnvin" file="text.html"/>
+       <record id="1488532003k64j8rahp5" name="astra zabbix" author="" url="" tags="" ctime="20170317111155" dir="1488532003wtjior6qsz" file="text.html"/>
       </recordtable>
      </node>
     </node>
