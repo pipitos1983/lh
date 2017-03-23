@@ -3,88 +3,88 @@
 p, li { white-space: pre-wrap; }
 </style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:17px; margin-right:190px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:17px; margin-right:190px; -qt-block-indent:0; text-indent:0px;">В составе дистрибутива есть 2 версии заббикса:<br />zabbix-server-mysql<br />zabbix-server-pgsql</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:17px; margin-right:190px; -qt-block-indent:0; text-indent:0px;">В составе дистрибутива есть 2 версии заббикса:<br /><span style=" font-family:'FreeMono'; color:#6a1009;">zabbix-server-mysql<br />zabbix-server-pgsql</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:17px; margin-right:190px; -qt-block-indent:0; text-indent:0px;">Но если нет внешнего mysql сервера то вариант с мускулем не подходит,</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:17px; margin-right:190px; -qt-block-indent:0; text-indent:0px;">потому что:</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:190px; -qt-block-indent:0; text-indent:0px;">&quot;<span style=" font-family:'helvetica'; font-size:16px; color:#44a9cf; background-color:#ffffff;">в целях оптимизации состава операционной системы Astra Linux Special Edition из дистрибутива исключен ряд дублирующих друг друга компонент, решающих сходные целевые задачи. Например, из двух СУБД MySQL и PostgreSQL, входящих в состав Astra Linux Common Edition, в дистрибутив операционной системы Astra Linux Special Edition включена СУБД PostgreSQL&quot;</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:190px; -qt-block-indent:0; text-indent:0px; font-family:'helvetica'; font-size:16px; color:#44a9cf;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">помним что при установке:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&quot;[info] zabbix_server is disabled in /etc/default/zabbix-server&quot;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">&quot;[info] zabbix_server is disabled in /etc/default/zabbix-server&quot;</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">______________________________________________</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Настройка СУБД:</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">usermod -a -G shadow postgres</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">setfacl -d -m u:postgres:r /etc/parsec/macdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">setfacl -R -m u:postgres:r /etc/parsec/macdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">setfacl -m u:postgres:rx /etc/parsec/macdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">service postgresql restart</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">adduser zabbixdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">usermac -c 0:0 zabbixdb</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">{ </p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">вероятно может потребоваться:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">usermod -a -G shadow zabbixdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">setfacl -d -m u:zabbixdb:r /etc/parsec/macdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">setfacl -R -m u:zabbixdb:r /etc/parsec/macdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">   setfacl -m u:zabbixdb:rx /etc/parsec/macdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">}</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">su postgres</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">psql template1</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">CREATE USER zabbixdb WITH PASSWORD '11111111';</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">CREATE DATABASE zabbix;</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">GRANT ALL PRIVILEGES ON DATABASE zabbix to zabbixdb;</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">usermod -a -G shadow postgres</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">setfacl -d -m u:postgres:r /etc/parsec/macdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">setfacl -R -m u:postgres:r /etc/parsec/macdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">setfacl -m u:postgres:rx /etc/parsec/macdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">service postgresql restart</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">adduser zabbixdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">usermac -c 0:0 zabbixdb</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">{ </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">вероятно может потребоваться:</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">usermod -a -G shadow zabbixdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">setfacl -d -m u:zabbixdb:r /etc/parsec/macdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">setfacl -R -m u:zabbixdb:r /etc/parsec/macdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">   setfacl -m u:zabbixdb:rx /etc/parsec/macdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">}</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">su postgres</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">psql template1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">CREATE USER zabbixdb WITH PASSWORD '11111111';</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">CREATE DATABASE zabbix;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">GRANT ALL PRIVILEGES ON DATABASE zabbix to zabbixdb;</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">! В качестве имени пользователя нельзя использовать имя user !</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">проверка:<br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">su zabbixdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cd</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">psql -d zabbix</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">zabbix=&gt; \l</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">zabbix=&gt; \q</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">su zabbixdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">cd</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">psql -d zabbix</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">zabbix=&gt; \l</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">zabbix=&gt; \q</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">____________________________________</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Импорт таблиц:<br />В отличии от официальной документации по заббиксу базы расположены в:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">/usr/share/zabbix-server-pgsql</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">/usr/share/zabbix-server-pgsql</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">распаковываем и:</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">psql -d zabbix -f schema.sql</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">psql -d zabbix -f images.sql</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">psql -d zabbix -f data.sql</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">psql -d zabbix -f schema.sql</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">psql -d zabbix -f images.sql</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">psql -d zabbix -f data.sql</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">! порядок важен !</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">___________________________________</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">меняем /etc/default/zabbix-server:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">START=yes</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">START=yes</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">__________________________________</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">/etc/zabbix/zabbix_server.conf:</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">DBUser=zabbixdb</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">DBPassword=11111111</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">/etc/zabbix/zabbix_server.conf:</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">DBUser=zabbixdb</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">DBPassword=11111111</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">___________________________________</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">service zabbix-server start</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">service zabbix-server start</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">___________________________________</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Для управления и просмотра нужно ставить вебморду:</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">apt-get install zabbix-frontend-php</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">apt-get install zabbix-frontend-php</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">в процессе установки потребуется записать конфигурацию в каталог /etc/zabbix</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Прав на запись у пользователя нет поэтому нужно сделать конфиг заранее:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">touch /etc/zabbix/zabbix.conf.php</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">chmod 666 /etc/zabbix/zabbix.conf.php</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">touch /etc/zabbix/zabbix.conf.php</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">chmod 666 /etc/zabbix/zabbix.conf.php</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">в процессе установки он перезапишется веб-интерфейсом заббикса.</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
@@ -92,32 +92,33 @@ p, li { white-space: pre-wrap; }
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cd /usr/share/doc/zabbix-frontend-php/examples/apache.conf /etc/apache2/sites-available/zabbix.conf</p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ln -s /etc/apache2/sites-available/zabbix.conf /etc/apache2/sites-enabled/zabbix.conf</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">добавляем в него строки:<br />&lt;Directory /usr/share/zabbix&gt;</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                AuthPAM_Enabled on</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                AuthType Basic</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                AuthName &quot;PAM authentication&quot;</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                require valid-user</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                Options Indexes FollowSymLinks MultiViews</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                AllowOverride None</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                Order allow,deny</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">                allow from all</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/Directory&gt;</p>
-<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">php_value max_execution_time 300</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">php_value memory_limit 128M</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">php_value post_max_size 16M</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">php_value upload_max_filesize 2M</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">php_value max_input_time 300</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">php_value date.timezone Europe/Moscow</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">добавляем в него строки:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;"><br />&lt;Directory /usr/share/zabbix&gt;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                AuthPAM_Enabled on</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                AuthType Basic</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                AuthName &quot;PAM authentication&quot;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                require valid-user</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                Options Indexes FollowSymLinks MultiViews</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                AllowOverride None</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                Order allow,deny</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">                allow from all</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">&lt;/Directory&gt;</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'FreeMono'; color:#6a1009;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">php_value max_execution_time 300</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">php_value memory_limit 128M</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">php_value post_max_size 16M</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">php_value upload_max_filesize 2M</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">php_value max_input_time 300</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">php_value date.timezone Europe/Moscow</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">перегружаем:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">service apache2 reload</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">service apache2 reload</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">После этого можно зайти на </p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">http://адрессайта/zabbix</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">http://адрессайта/zabbix</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">и продолжить настройку.</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">После установки имя / пароль для входа по умолчанию:</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Admin/zabbix</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'FreeMono'; color:#6a1009;">Admin/zabbix</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:16px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p></body></html>
