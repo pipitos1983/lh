@@ -52,6 +52,7 @@
      <node crypt="" id="1487760600r47hnuos4y" name="vmware">
       <recordtable>
        <record id="1487760723uuxgcx19ld" name="падение vpxd при дублирующихся устройствах" author="" url="" tags="" ctime="20170222135203" dir="1487760723bbqzst9wme" file="text.html"/>
+       <record id="1490392037lh4h0fl92c" name="Enable SNMP in vSphere ESX 6" author="" url="" tags="" ctime="20170325004717" dir="14903920377lsyp7bf13" file="text.html"/>
       </recordtable>
      </node>
     </node>
