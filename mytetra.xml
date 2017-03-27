@@ -36,7 +36,11 @@
        <record id="1489760870dvwvakrbfp" name="DB2" author="" url="" tags="" ctime="20170317172750" dir="14897608702vo148glpb" file="text.html"/>
       </recordtable>
      </node>
-     <node crypt="" id="1490604946553059uh0s" name="arch"/>
+     <node crypt="" id="1490604946553059uh0s" name="arch">
+      <recordtable>
+       <record id="1490605003b1i39camz4" name="pacman" author="" url="" tags="" ctime="20170327115643" dir="1490605003drdo080bu2" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1487753785846jf0jxwb" name="windows">
      <recordtable>
