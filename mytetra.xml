@@ -23,7 +23,7 @@
       <record id="1490085216zbml572xmi" name="nsupdate (обновление записей на днс клиентом)" author="" url="" tags="" ctime="20170321113336" dir="1490085216zrsmat0zg8" file="text.html"/>
       <record id="1490965057ewjt7aj6vc" name="файлопомойка на centos с интеграцией в домен" author="" url="" tags="" ctime="20170331155737" dir="1490965057d0irc5w0d1" file="text.html">
        <files>
-        <file id="1491556547he2c4lda5h" fileName="smb.conf" type="file"/>
+        <file id="1491821842n2tvujlkog" fileName="smb.conf" type="file"/>
        </files>
       </record>
      </recordtable>
