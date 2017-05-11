@@ -79,6 +79,9 @@
      </recordtable>
     </node>
     <node crypt="" id="1487760576y8ehzu7ayd" name="Виртуализация">
+     <recordtable>
+      <record id="1494499160mg052vmsfw" name="hyper-v сервер на виртуалке ESXi" author="" url="" tags="" ctime="20170511133920" dir="1494499160k2hbc5mhai" file="text.html"/>
+     </recordtable>
      <node crypt="" id="1487760600r47hnuos4y" name="vmware">
       <recordtable>
        <record id="1487760723uuxgcx19ld" name="падение vpxd при дублирующихся устройствах" author="" url="" tags="" ctime="20170222135203" dir="1487760723bbqzst9wme" file="text.html"/>
