@@ -91,13 +91,18 @@
     </node>
     <node crypt="" id="148817909321ubbgtux3" name="СУБД">
      <recordtable>
-      <record id="1488137828s4th7zui78" name="mysql копирование таблицы" author="" url="" tags="" ctime="20170227100509" dir="14881378284v1iloanba" file="text.html"/>
       <record id="1488179294kav3fa27ai" name="DB2 скрипт запуска (init)" author="" url="" tags="" ctime="20170227100814" dir="14881792942pgsf705x6" file="text.html"/>
-      <record id="1488453317klzqq4osdd" name="mysqldump" author="" url="" tags="" ctime="20170302141517" dir="1488453317ot869zibg0" file="text.html"/>
       <record id="14902617702peqrrceym" name="postgres" author="" url="" tags="" ctime="20170323123610" dir="1490261770jhve7gohed" file="text.html"/>
-      <record id="1494837738tmpfqazc49" name="mysql смена админского пароля, создание пользователя" author="" url="" tags="" ctime="20170515114218" dir="1494837738560cwju8uy" file="text.html"/>
-      <record id="1494838082beqewzpgqq" name="mysql назначение прав на базу пользователю" author="" url="" tags="" ctime="20170515114802" dir="1494838082a064o7xkh3" file="text.html"/>
      </recordtable>
+     <node crypt="" id="1494840703yp9gzq3cdi" name="MySQL">
+      <recordtable>
+       <record id="1494840688gpoawu1tvd" name="mysql создание базы" author="" url="" tags="" ctime="20170515123150" dir="1494840688r5it17x7z3" file="text.html"/>
+       <record id="1494838082beqewzpgqq" name="mysql назначение прав на базу пользователю" author="" url="" tags="" ctime="20170515123152" dir="1494838082a064o7xkh3" file="text.html"/>
+       <record id="1494837738tmpfqazc49" name="mysql смена админского пароля, создание пользователя" author="" url="" tags="" ctime="20170515123153" dir="1494837738560cwju8uy" file="text.html"/>
+       <record id="1488453317klzqq4osdd" name="mysqldump" author="" url="" tags="" ctime="20170515123156" dir="1488453317ot869zibg0" file="text.html"/>
+       <record id="1488137828s4th7zui78" name="mysql копирование таблицы" author="" url="" tags="" ctime="20170515123158" dir="14881378284v1iloanba" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1490251447zhzx76lp4r" name="1C">
      <recordtable>
