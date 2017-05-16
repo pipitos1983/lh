@@ -7,9 +7,9 @@
    <node crypt="" id="14872543380dveb2jp4x" name="Админство">
     <recordtable>
      <record id="1488198271wxvtkc4zlj" name="java и flash полные дистрибутивы" author="" url="" tags="" ctime="20170227152431" dir="1488198271e3vpzuflkc" file="text.html"/>
-     <record id="1490896706oqcdxkpynj" name="Пространство для исследования" author="" url="" tags="" ctime="20170330205826" dir="1490896706ukhrtl7jn9" file="text.html"/>
      <record id="1490967449ibq1wh8wau" name="как проверить srv записи в dns для контроллеров домена" author="" url="" tags="" ctime="20170331163729" dir="1490967449wx1ymlxmjm" file="text.html"/>
      <record id="1491230409hlud5s03id" name="Включение swap на zfs-volume device под FreeNAS 9.10.X" author="vk" url="" tags="" ctime="20170403174009" dir="1491230409q21kkusibt" file="text.html"/>
+     <record id="1494928985bo8sfsamst" name="keytab" author="" url="" tags="" ctime="20170516130838" dir="1494928985cghiu17lvq" file="text.html"/>
     </recordtable>
     <node crypt="" id="1487753764i35b3junjo" name="linux">
      <recordtable>
@@ -77,7 +77,6 @@
       <record id="14918256007qbz69hiqg" name="копирование каталогов с сохранением прав доступа" author="" url="" tags="" ctime="20170410150000" dir="1491825600fp5jtwqt3d" file="text.html"/>
       <record id="1491834637o2kqyf4w81" name="настройка размещения домашних каталогов (homeshare)" author="" url="" tags="" ctime="20170410173037" dir="1491834637qh43iry9u0" file="text.html"/>
       <record id="1491907878osrd26ypwr" name="PowerShell замена атрибута у доменных пользователей " author="" url="" tags="" ctime="20170411135118" dir="1491907878ufh7bunsuc" file="text.html"/>
-      <record id="1494928985bo8sfsamst" name="keytab" author="" url="" tags="" ctime="20170516130305" dir="1494928985cghiu17lvq" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1487760576y8ehzu7ayd" name="Виртуализация">
