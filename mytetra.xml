@@ -60,7 +60,6 @@
      <node crypt="" id="1491807884n3k8srijmf" name="centos">
       <recordtable>
        <record id="14918080062kqy5805cp" name="Disable IPv6" author="" url="" tags="" ctime="20170410100646" dir="1491808006nqsutzynh1" file="text.html"/>
-       <record id="1494922525p3bmej5okj" name="bitrix24" author="" url="" tags="" ctime="20170516111525" dir="1494922525jz7bncbkb0" file="text.html"/>
       </recordtable>
      </node>
     </node>
@@ -111,6 +110,7 @@
       <record id="1490252899fhzxu99tok" name="Установка HASP ключа на linux" author="" url="" tags="" ctime="20170323100819" dir="149025289964myoiheyz" file="text.html"/>
       <record id="149026291842ci9u5g3i" name="установка на linux" author="" url="" tags="" ctime="20170323125518" dir="14902629187wktj9e109" file="text.html"/>
       <record id="1490355943fwp157k79f" name="про лицензии" author="" url="" tags="" ctime="20170324144543" dir="1490355943phm1pg5uwh" file="text.html"/>
+      <record id="1494922525p3bmej5okj" name="bitrix24" author="" url="" tags="" ctime="20170517122524" dir="1494922525jz7bncbkb0" file="text.html"/>
      </recordtable>
     </node>
    </node>
