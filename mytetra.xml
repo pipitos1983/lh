@@ -62,6 +62,7 @@
      <node crypt="" id="1491807884n3k8srijmf" name="centos">
       <recordtable>
        <record id="14918080062kqy5805cp" name="Disable IPv6" author="" url="" tags="" ctime="20170410100646" dir="1491808006nqsutzynh1" file="text.html"/>
+       <record id="1495705219ixgu43znss" name="yum + proxy" author="" url="" tags="" ctime="20170525124019" dir="1495705219o7d8jm1ajz" file="text.html"/>
       </recordtable>
      </node>
     </node>
