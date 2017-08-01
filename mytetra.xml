@@ -109,6 +109,11 @@
        <record id="1488137828s4th7zui78" name="mysql копирование таблицы" author="" url="" tags="" ctime="20170515123158" dir="14881378284v1iloanba" file="text.html"/>
       </recordtable>
      </node>
+     <node crypt="" id="1501577675rqhqgtk4ph" name="MSSQL">
+      <recordtable>
+       <record id="15015778306lcbcdvd5n" name="msssql express 2016" author="" url="" tags="" ctime="20170801115710" dir="15015778300iqhonqo7f" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1490251447zhzx76lp4r" name="1C">
      <recordtable>
