@@ -133,6 +133,7 @@
     <node crypt="" id="15088502183kkxsw3eq7" name="BSD">
      <recordtable>
       <record id="1508850280obs4f6b93m" name="FreeBSD basic" author="" url="" tags="" ctime="20171024160440" dir="1508850280f0mfyvshpi" file="text.html"/>
+      <record id="1509030539vn5vz5qf6a" name="проблемы zabbix в jail'e" author="" url="" tags="" ctime="20171026180859" dir="1509030539o0nxus3qnl" file="text.html"/>
      </recordtable>
     </node>
    </node>
