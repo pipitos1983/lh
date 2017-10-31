@@ -33,6 +33,7 @@
       <record id="14938972757zm9wotivd" name="redmine на debian8 из репов" author="" url="" tags="" ctime="20170504142755" dir="1493897275pp41c89zat" file="text.html"/>
       <record id="14966481444l1x2rwmnf" name="ssh туннелирование" author="" url="" tags="" ctime="20170605103544" dir="14966481441v6pjqjdo6" file="text.html"/>
       <record id="15093540228qk8i2p0c0" name="LUKS шифрование дисков" author="" url="" tags="" ctime="20171030120022" dir="1509354022zkikjluhxc" file="text.html"/>
+      <record id="1509461872gfzla2oyj1" name="LVM2 (виртуальная таблица разделов)" author="" url="" tags="" ctime="20171031175752" dir="150946187239wk94im4b" file="text.html"/>
      </recordtable>
      <node crypt="" id="14896576688fpr7zo7pe" name="fedora">
       <recordtable>
