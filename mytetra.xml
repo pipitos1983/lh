@@ -140,6 +140,9 @@
     </node>
    </node>
    <node crypt="" id="1487254369qtyp1tbutt" name="програмизм">
+    <recordtable>
+     <record id="1511252007dwuinevmsv" name="excel" author="" url="" tags="" ctime="20171121111327" dir="1511252007zzc8os2ryl" file="text.html"/>
+    </recordtable>
     <node crypt="" id="148725443293f5jr4dqc" name="python">
      <recordtable>
       <record id="14872549077ijx6jdlq4" name="заметки" author="" url="" tags="" ctime="20170216172147" dir="1487254907f8g8s07cl7" file="text.html"/>
