@@ -139,6 +139,7 @@
       <record id="1509030539vn5vz5qf6a" name="проблемы zabbix в jail'e" author="" url="" tags="" ctime="20171026180859" dir="1509030539o0nxus3qnl" file="text.html"/>
       <record id="15125470910lnmrsm3z8" name="Работа с диском gpart" author="" url="" tags="" ctime="20171206105811" dir="1512547091m9jopxxe3d" file="text.html"/>
       <record id="1514293242qia1a0rhjw" name="FreeNAS ручная настройка сети в jail'ах" author="" url="" tags="" ctime="20171226160042" dir="15142932424xfjchvg1t" file="text.html"/>
+      <record id="1521111480kd2714rqqd" name="добавление диска в пулл для кеширования" author="" url="" tags="" ctime="20180315135800" dir="1521111480vslbug4u9w" file="text.html"/>
      </recordtable>
     </node>
    </node>
